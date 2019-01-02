@@ -1,0 +1,6 @@
+--String concatenation
+SELECT CONCAT(Name, CONCAT(CONCAT('(', UPPER(SUBSTR(Occupation,1,1))),')')) 
+FROM OCCUPATIONS ORDER BY Name;
+                                                    
+SELECT CONCAT('There are a total of ', CONCAT(count(OCCUPATION), CONCAT(' ',concat(lower(occupation),'s.')))) 
+FROM OCCUPATIONS GROUP BY OCCUPATION ORDER BY count(OCCUPATION), OCCUPATION ASC;
